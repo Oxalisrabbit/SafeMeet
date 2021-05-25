@@ -3,8 +3,9 @@
     package="com.example.originalnavigationdrawer">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OriginalNavigationDrawer">
-        <activity android:name=".MainActivity_ActivityCreate"></activity>
+        <activity android:name=".MainActivity_Admin"></activity>
+        <activity android:name=".MainActivity_Rating" />
+        <activity android:name=".MainActivity_Register" />
+        <activity android:name=".MainActivity_ActivityCreate" />
         <activity android:name=".MainActivity_SOS" />
         <activity android:name=".MainActivity_Details" />
         <activity android:name=".MainActivity_EachType" />

@@ -1,11 +1,16 @@
 package com.example.originalnavigationdrawer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -15,6 +20,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -52,13 +58,67 @@ public class MainActivity_SOS extends AppCompatActivity {
             }
         });
 
+        Button emergency_center = (Button) findViewById(R.id.emergency_center);
+        emergency_center.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        String emergencyFlag = "Emergency request at" + new Timestamp(System.currentTimeMillis()).toString() + ";";
+                        if (DBUtils.addEmergencyMessage(
+                                Integer.valueOf((String) origin.get(0).get("uid")),
+                                Integer.valueOf((String) origin.get(0).get("id")),
+                                emergencyFlag
+                        ) == true){
+                            Log.d("Emergency", "success");
+                        }
+                        else {
+                            Log.d("Emergency", "failed");
+                        }
+                    }
+                }).start();
+            }
+        });
+
+        Button show_location = (Button) findViewById(R.id.show_location);
+        show_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, 500, new LocationListener() {
+                        @Override
+                        public void onLocationChanged(@NonNull Location location) {
+                            double lng = location.getLongitude();
+                            double lat = location.getLatitude();
+                            new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    String currentLocation = "(" + lng + "," + lat + ");";
+                                    DBUtils.addEmergencyMessage(
+                                            Integer.valueOf((String) origin.get(0).get("uid")),
+                                            Integer.valueOf((String) origin.get(0).get("id")),
+                                            currentLocation
+                                    );
+                                    Log.d("LocationInfo", currentLocation);
+                                }
+                            }).start();
+                        }
+                    });
+                }
+                catch (SecurityException e){
+                    Log.d("shareLocation", "failed:" + e.getMessage());
+                }
+            }
+        });
+
         Button emergency_contact = (Button) findViewById(R.id.emergency_contact);
         emergency_contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_CALL);
-//                Uri uri = Uri.parse("tel:" + "0061-468964110");
-                Uri uri = Uri.parse("tel:" + "1 555-521-5554");
+                Uri uri = Uri.parse("tel:" + "1 555-521-5558");
                 intent.setData(uri);
                 startActivity(intent);
             }
