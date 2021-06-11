@@ -18,8 +18,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="392dp"
-        android:layout_height="526dp"
+        android:layout_width="393dp"
+        android:layout_height="525dp"
         android:layout_marginTop="30dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +90,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:text="\nThird" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="\nAuthentication State" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -163,6 +170,14 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/auth_state"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:text="\nNO"
+                android:textColor="@color/design_default_color_error" />
         </LinearLayout>
     </LinearLayout>
 
@@ -177,7 +192,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/auth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

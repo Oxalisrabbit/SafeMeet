@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.originalnavigationdrawer.ui.home.HomeFragment"
+        android:name="com.example.safemeet.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.originalnavigationdrawer.ui.gallery.GalleryFragment"
+        android:name="com.example.safemeet.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.originalnavigationdrawer.ui.slideshow.SlideshowFragment"
+        android:name="com.example.safemeet.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_test"
-        android:name="com.example.originalnavigationdrawer.ui.test.TestFragment"
+        android:name="com.example.safemeet.ui.test.TestFragment"
         android:label="@string/menu_test"
         tools:layout="@layout/fragment_test" />
 </navigation>
