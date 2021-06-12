@@ -6,46 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity_SOS">
 
-    <Button
-        android:id="@+id/backButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
 
-    <Button
-        android:id="@+id/emergency_center"
-        android:layout_width="361dp"
-        android:layout_height="102dp"
-        android:layout_marginTop="148dp"
-        android:text="Call 24*7 emergency customer center"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/show_location"
-        android:layout_width="361dp"
-        android:layout_height="102dp"
-        android:layout_marginTop="64dp"
-        android:text="share current location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emergency_center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/emergency_contact"
-        android:layout_width="361dp"
-        android:layout_height="102dp"
-        android:layout_marginTop="72dp"
-        android:text="call emergency contact"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/show_location" />
+            <Button
+                android:id="@+id/backButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="Back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.049"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.023" />
 
+            <Button
+                android:id="@+id/emergency_center"
+                android:layout_width="361dp"
+                android:layout_height="102dp"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center"
+                android:text="Call 24*7 emergency customer center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/show_location"
+                android:layout_width="361dp"
+                android:layout_height="102dp"
+                android:layout_marginTop="64dp"
+                android:layout_gravity="center"
+                android:text="share current location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emergency_center" />
+
+            <Button
+                android:id="@+id/emergency_contact"
+                android:layout_width="361dp"
+                android:layout_height="102dp"
+                android:layout_marginTop="72dp"
+                android:layout_gravity="center"
+                android:text="call emergency contact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/show_location" />
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

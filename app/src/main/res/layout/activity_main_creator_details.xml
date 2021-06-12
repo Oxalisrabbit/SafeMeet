@@ -6,128 +6,145 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity_CreatorDetails">
 
-    <Button
-        android:id="@+id/backButton8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="393dp"
-        android:layout_height="525dp"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backButton8">
-
-        <LinearLayout
-            android:layout_width="204dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:textSize="20sp"
-                android:text="UserName" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:textSize="20sp"
-                android:text="Age" />
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:textSize="20sp"
-                android:text="Gender" />
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:textSize="20sp"
-                android:text="PhoneNumber" />
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:textSize="20sp"
-                android:text="Personal Tags" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:textSize="20sp"
-                android:text="Authentication State" />
-
-        </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/creator_username"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:gravity="center" />
+            <Button
+                android:id="@+id/backButton8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.049"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/creator_age"
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:gravity="center" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/backButton8">
 
-            <TextView
-                android:id="@+id/creator_gender"
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:gravity="center" />
+                <LinearLayout
+                    android:layout_width="204dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/creator_phone_num"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:gravity="center" />
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="UserName"
+                        android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/creator_tags"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:gravity="center" />
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:text="Age"
+                        android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/creator_auth_state"
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:gravity="center" />
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:text="Gender"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:text="PhoneNumber"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:text="Personal Tags"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:text="Authentication State"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/creator_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/creator_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/creator_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/creator_phone_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/creator_tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/creator_auth_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

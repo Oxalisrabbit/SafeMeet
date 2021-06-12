@@ -17,6 +17,7 @@ import java.util.List;
 public class MainActivity_Rating extends AppCompatActivity {
 
     private List<HashMap<String, Object>> origin = new ArrayList<>();
+    private UserInfo userInfo = new UserInfo();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,9 @@ public class MainActivity_Rating extends AppCompatActivity {
         ArrayList list = receiver.getParcelableArrayList("data");
         List<HashMap<String, Object>> receiverContent = (List<HashMap<String, Object>>) list.get(0);
         origin = receiverContent;
+
+        userInfo = (UserInfo) getIntent().getSerializableExtra("UserInfo");
+
         Button done = (Button) findViewById(R.id.done);
         TextView content = (TextView) findViewById(R.id.content_rating);
         RatingBar rating = (RatingBar) findViewById(R.id.rating);
@@ -52,7 +56,11 @@ public class MainActivity_Rating extends AppCompatActivity {
                 }).start();
 
                 Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("UserInfo", userInfo);
+                intent.putExtras(bundle);
                 intent.setClass(MainActivity_Rating.this, MainActivity_Home.class);
+
                 startActivity(intent);
             }
         });
