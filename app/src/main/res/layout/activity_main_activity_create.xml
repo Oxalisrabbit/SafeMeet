@@ -112,6 +112,7 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
+                        android:text="Meal"
                         app:layout_constraintBottom_toTopOf="@+id/size_create"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.328"
@@ -123,6 +124,7 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
+                        android:text="2"
                         app:layout_constraintBottom_toTopOf="@+id/location_create"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.761"
@@ -134,6 +136,7 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
+                        android:text="2021-6-12 10:00:00"
                         app:layout_constraintBottom_toTopOf="@+id/end_create"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.563"
@@ -145,6 +148,7 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="textPersonName"
+                        android:text="2021-12-31 20:00:00"
                         app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.572"
@@ -157,6 +161,7 @@
                         android:layout_marginBottom="12dp"
                         android:ems="10"
                         android:inputType="textPersonName"
+                        android:text="test location"
                         app:layout_constraintBottom_toTopOf="@+id/start_create"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.572"
@@ -190,7 +195,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/content_create"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:text="Here are some test information in details area." />
 
             </com.google.android.material.textfield.TextInputLayout>
 

@@ -96,6 +96,18 @@
             <!--                android:textColor="@color/text_color"-->
             <!--                android:textSize="15sp" />-->
 
+            <Button
+                android:id="@+id/backButton7"
+                android:layout_width="330dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="Finish / Back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <RelativeLayout
                 android:layout_width="240dp"
                 android:layout_height="151dp"
@@ -328,18 +340,6 @@
                     android:textColor="@color/secondary_text_color"
                     android:textSize="14sp"></TextView>
             </LinearLayout>
-
-            <Button
-                android:id="@+id/backButton7"
-                android:layout_width="330dp"
-                android:layout_height="44dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:text="Finish / Back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
 
