@@ -11,7 +11,7 @@
  Target Server Version : 100419
  File Encoding         : 65001
 
- Date: 13/06/2021 01:27:19
+ Date: 13/06/2021 19:26:22
 */
 
 SET NAMES utf8mb4;
@@ -127,6 +127,6 @@ CREATE TABLE `users`  (
 -- ----------------------------
 INSERT INTO `users` VALUES (1, 'oxalis', '123456', 'YES', 25, 'M', '1 555-521-5554', '1 555-521-5558', 'Coding;Badminton;Gaming', 4.16667);
 INSERT INTO `users` VALUES (2, 'test2', '123456', 'NO', 25, 'F', '1 555-521-5554', '1 555-521-5558', 'Coding;Badminton;Gaming', 5);
-INSERT INTO `users` VALUES (3, 'test3', '123456', '\nNO', 25, 'M', '1 555-521-5554', '1 555-521-5556', 'Coding;Badminton;Gaming', 5);
+INSERT INTO `users` VALUES (3, 'test3', '123456', 'NO', 25, 'M', '1 555-521-5554', '1 555-521-5556', 'Coding;Badminton;Gaming', 5);
 
 SET FOREIGN_KEY_CHECKS = 1;
